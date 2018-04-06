@@ -18,15 +18,18 @@
 		<h1 align="center"> <font face="Segoe Script" color="black">World Factbook</font></h1>
 		<div align="center"><img src="static/image/DRAPEAU.gif" > 
 		</div>
-	<h1>World Factbook</h1>
-		<div>There are {{w|length}} countries in in the world.</div>
-		<ul>
-			{% for c in w %}
-			<li><a href='/countryByName/{{c.name}}'>
-				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
-				{{c.name}}</a></li>
-			{% endfor %}
-		</ul>
+	<div class="list-group" align="center">
+  <ul>
+	   <li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Asia" >Asia</a></li>
+	   <li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Europe">Europea</a></li>
+	    <li class="list-group-item list-group-item-action" ><a href="http://localhost:5637/continent/South%20America">South America</a></li>
+		
+		<li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Africa">Africa</a></li>
+		<li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/North%20America">North America</a></li>
+		
+	</ul>
+		
+</div>
 	   
 	   
 	
