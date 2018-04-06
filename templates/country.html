@@ -2,28 +2,75 @@
 <html>
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
+	<link rel='stylesheet' href='/static/style.css'>
+	 <link  href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 	<body>
-		<h1>{{c['name']}}</h1>
-		<div class='properties'>
-			<div>
-				<div>Capital</div>
-				<div>{{c['capital']}}</div>
-			</div>
-			<div>
-				<div>Continent</div>
-				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
-			</div>
-			<div>
-				<div>Population</div>
-				<div>{{"{:,.0f}".format(c['population'])}}</div>
-			</div>
-			<div>
-				<div>GDP (million $)</div>
-				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
-			</div>
-		</div>
-		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
-		<div class="delete-button"><a href='/delete/{{c.name}}'>Delete</a></div>
+		
+		<table class="table table-bordered" align="center">
+	<h1 align="center">{{c['name']}}</h1>
+  <div align="center">
+  <tbody align="center">
+
+    <tr>
+      <th scope="row">1</th>
+      <td>Capital</td>
+      <td>{{c['capital']}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Continent</td>
+      <td><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Population</td>
+      <td><div>{{"{:,.0f}".format(c['population'])}}</div></td>
+      
+    </tr>
+	<tr>
+      <th scope="row">4</th>
+      <td>Area</td>
+      <td>{{"{:,.0f}".format(c['area'])}}</td>
+      
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>GDP (million $)</td>
+      <td>{{ "{:,.0f}".format(c['gdp']/1000000) }}</td>
+      
+    </tr>
+	<tr>
+      <th scope="row">6</th>
+      <td>Photo</td>
+      <td><img src="/static/flags/{{c['tld']}}.gif" ></td>
+      
+    </tr>
+	<tr>
+      <th scope="row"></th>
+      <td></td>
+      <td><a href="/editcountryByName/{{c.name}}" type="button" class="btn btn-primary">Edit</a>
+	<a href='/delete/{{c.name}}' type="button" class="btn btn-primary">Delete</a>
+	<a href="/createcountry" type="button" class="btn btn-primary"> Create</a>
+</td>
+
+      
+    </tr>
+	
+	
+  </tbody>
+  
+  </div>
+  
+   
+</table>
+
 	</body>
 </html>

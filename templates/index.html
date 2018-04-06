@@ -1,23 +1,39 @@
 <!doctype html>
 <html>
 <head>
-	<link rel='stylesheet' href='/static/style.css'>
+	 <link rel='stylesheet' href='/static/style.css'>
+	 <link  href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+<style>
 </head>
+<style>
+</style
 	<body>
-		<h1>World Factbook</h1>
-		<div>There are {{w|length}} countries in in the world.</div>
-		<ul>
-			{% for c in w %}
-			<li><a href='/countryByName/{{c.name}}'>
-				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
-			 {{c.name}}</a></li>
-			{% endfor %}
-		</ul>
-		<div class='nav_button'>
-			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+		<h1 align="center"> <font face="Segoe Script" color="black">World Factbook</font></h1>
+		<div align="center"><img src="static/image/DRAPEAU.gif" > 
 		</div>
-		<div class='nav_button'>
-			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
-		</div>
+	<div class="list-group" align="center">
+  <ul>
+	   <li class="list-group-item list-group-item-action"><a href="http://localhost:8080/continent/Asia" >Asia</a></li>
+	   <li class="list-group-item list-group-item-action"><a href="http://localhost:8080/continent/Europe">Europea</a></li>
+	    <li class="list-group-item list-group-item-action" ><a href="http://localhost:8080/continent/South%20America">South America</a></li>
+		
+		<li class="list-group-item list-group-item-action"><a href="http://localhost:8080/continent/Africa">Africa</a></li>
+		<li class="list-group-item list-group-item-action"><a href="http://localhost:8080/continent/North%20America">North America</a></li>
+		
+	</ul>
+		
+</div>
+	   
+	   
+	
+
 	</body>
+	 <script src="bootstrap/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

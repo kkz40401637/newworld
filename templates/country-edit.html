@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+	<link rel='stylesheet' href='/static/style.css'>
+	 <link  href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+	<body>
+	<form action="/updatecountryByName">	
+		<table class="table table-bordered" align="center">
+	<h1 align="center">{{c['name']}}</h1>
+     <div>
+				<div><input name='country' type="hidden" value="{{c['name']}}" id=""></div>
+	</div>
+	<div align="center">
+  <tbody align="center">
+
+    <tr>
+      <th scope="row">1</th>
+      <td>Capital</td>
+      <td><div><input name='capital' value="{{c['capital']}}"></div></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Continent</td>
+      <td><div><input type="text" name="continent" value="{{c['continent']}}"></div></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Population</td>
+      <td><input type="text" name="population" value="{{c['population']}}"></td>
+      
+    </tr>
+	<tr>
+      <th scope="row">4</th>
+      <td>Area</td>
+      <td><input type="text" name="population" value="{{c['area']}}"></td>
+      
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>GDP (million $)</td>
+      <td><input type="text" name="population" value="{{c['gdp']}}"></td>
+      
+    </tr>
+	<tr>
+      <th scope="row">6</th>
+      <td>Photo</td>
+      <td><img src="/static/flags/{{c['tld']}}.gif" ></td>
+      
+    </tr>
+	<tr>
+      <th scope="row"></th>
+      <td></td>
+      <td><div class="delete-button"><a href='/delete/{{c.name}}' type="button" class="btn btn-default">Delete</a></div>
+		<input type="submit" value="submit" type="button" class="btn btn-default">
+</td>
+
+      
+    </tr>
+	
+	
+  </tbody>
+  
+  </div>
+  
+   
+</table>
+</form>
+	</body>
+</html>

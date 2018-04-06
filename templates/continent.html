@@ -2,14 +2,22 @@
 <html>
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
+	<link  href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	<link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 	<body>
-		<h1>{{a}}</h1>
-	<div>There are {{lenght_of_cl}} countries in {{a}}</div>
+	<div  class="container" >
+		<h1 align="center">{{a}}</h1>
+	<div align="center">There are {{cl|length}} countries in {{a}}</div>
 	<ul>
 		{% for c in cl %}
-		<li><a href="/countryByName/{{c.name}}"><img src="{{c.flag}}" class="tiny">{{c.name}}</a></li>
+		<li class="list-group-item disabled"><a href="/countryByName/{{c.name}}"><img src="{{c.flag}}" class="tiny">{{c.name}} <br align="center">{{c.continent}} <br> Click lease more detail...</br></a></li>
 		{% endfor %}
 	</ul>
+	</div>
 	</body>
 </html>
