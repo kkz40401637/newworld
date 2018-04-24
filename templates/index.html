@@ -15,25 +15,27 @@
 <style>
 </style
 	<body>
-		<h1 align="center"> <font face="Segoe Script" color="black">World Factbook</font></h1>
-		<div align="center"><img src="static/image/DRAPEAU.gif" > 
+		<h1>World Factbook</h1>
+		
+		<div>
+			{% for s in Lota %}
+			<a href="/startwithAlphetic/{{s}}">{{s}}</a>
+			{% endfor %}
 		</div>
-	<div class="list-group" align="center">
-  <ul>
-	   <li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Asia" >Asia</a></li>
-	   <li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Europe">Europea</a></li>
-	    <li class="list-group-item list-group-item-action" ><a href="http://localhost:5637/continent/South%20America">South America</a></li>
-		
-		<li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/Africa">Africa</a></li>
-		<li class="list-group-item list-group-item-action"><a href="http://localhost:5637/continent/North%20America">North America</a></li>
-		
-	</ul>
-		
-</div>
-	   
-	   
-	
-
+		<div>There are {{w|length}} countries in in the world.</div>
+		<ul>
+			{% for c in w %}
+			<li><a href='/countryByName/{{c.name}}'>
+				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
+				{{c.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+		</div>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+		</div>
 	</body>
 	 <script src="bootstrap/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
