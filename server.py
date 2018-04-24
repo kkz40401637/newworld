@@ -25,7 +25,8 @@ def beginPage(b):
 	return render_template('index.html',
 		w = w[bn:bn+page_size],
 		page_number = bn,
-		page_size = page_size
+		page_size = page_size,
+                Lota=lota
 		)
     
 @app.route('/startwithAlphetic/<a>')
