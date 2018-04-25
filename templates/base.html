@@ -1,0 +1,27 @@
+<html>
+<head>
+	 <link rel='stylesheet' href='/static/style.css'>
+	 <link  href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 <link  href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>World Factbook</h1>
+<div>
+<form> <ul id="sort">
+	{% for s in Lota %}
+		<a href="/startwithAlphetic/{{s}}">{{s}}</a>
+	{% endfor %}
+</ul>
+</div>
+</form>
+
+<div>
+	{% block content %}
+	{% endblock %}
+</div>
+</body>
+</htmL>
